@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favorites",
+  "info": {
+    "name": "Favorite",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "book": {
+      "via": "favorites",
+      "model": "book"
+    },
+    "authorFavorite": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "favorites"
+    }
+  }
+}

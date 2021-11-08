@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "Book",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "shops": {
+      "via": "books",
+      "collection": "shop"
+    },
+    "categories": {
+      "via": "books",
+      "collection": "category"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "comments": {
+      "via": "book",
+      "collection": "comment"
+    },
+    "favorites": {
+      "via": "book",
+      "collection": "favorite"
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "aboutAuthor": {
+      "type": "text",
+      "required": true
+    },
+    "pages": {
+      "type": "string",
+      "required": true
+    },
+    "langue": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "CoupDeCoeur": {
+      "type": "boolean"
+    }
+  }
+}
