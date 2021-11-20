@@ -31,6 +31,7 @@
     "strapi-plugin-entity-relationship-chart": "^3.1.0",
     "strapi-plugin-graphql": "^3.6.7",
     "strapi-plugin-i18n": "3.6.7",
+    "strapi-plugin-import-export-content": "^0.4.2",
     "strapi-plugin-upload": "3.6.7",
     "strapi-plugin-users-permissions": "3.6.7",
     "strapi-utils": "3.6.7",
